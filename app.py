@@ -41,7 +41,7 @@ X_test, y_test= pickle.load(open("test_data.pkl","rb"))
 
 df=pd.read_csv("Bank.csv")
 
-st.sidebar.image("images/mentor.png",width=150)
+st.sidebar.image("mentor.png",width=150)
 
 model_choice=st.sidebar.radio("Select Model",["Logistic Regression","Decision Tree", "Random Forest", "Gradient Boosting", "XGBoost"], key="model_selector")
 
@@ -152,19 +152,19 @@ col1, col2, col3 = st.columns(3)
 with col1:  
      icon,metric=st.columns([1,3])
      with icon:
-          st.image("images/churn.jpg",width=70)   
+          st.image("churn.jpg",width=70)   
      with metric:
           st.metric("Churn Probability",round(prob,3))
 with col2:
      icon,metric=st.columns([1,3])
      with icon:
-          st.image("images/risk.png",width=70)   
+          st.image("risk.png",width=70)   
      with metric:
           st.metric("Risk Score", f"{risk_score:.0f}/100")
 with col3:
      icon,metric=st.columns([1,3])
      with icon:
-          st.image("images/category.png",width=70)   
+          st.image("category.png",width=70)   
      with metric:
           st.metric("Risk Category", risk)
 
